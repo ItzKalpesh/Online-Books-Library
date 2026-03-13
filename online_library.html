@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book library</title>
+</head>
+
+<style>
+    .ttl{
+        color: beige;
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
+        text-decoration: underline;
+    }
+
+    /* Owner info box */
+    .owner-box{
+        margin: 15px auto;
+        width: fit-content;
+        padding: 10px 22px;
+        border: 2px solid #8b5a2b;
+        border-radius: 14px;
+        color: #f0e6d2;
+        background: rgba(0,0,0,0.4);
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .bg{ 
+        background-image:url(/lib_image.jpg);
+        background-size: cover;
+        position: fixed;
+        inset: 0;
+        filter: brightness(0.5);
+        z-index: -1;
+    }
+
+    /* MAIN TABLE */
+    .head_flds{
+        border: 6px solid #8b5a2b;
+        border-collapse: separate;     /* allows rounded corners */
+        border-spacing: 0;
+        text-align: center;
+        margin-left: 42vh;
+        margin-top: 6vh; 
+        font-weight: 600;
+        font-size: 19px;
+        width: 120vh;
+        height: 90vh;
+        color: #f0e6d2;
+
+        /* NEW PROFESSIONAL LOOK */
+        background: rgba(45, 30, 18, 0.85);
+        border-radius: 18px;
+        overflow: hidden;
+    } 
+    .fld_names{
+        border: 2px solid #a67c52;
+        font-size: larger;
+        font-weight: 600;
+        background: rgba(60, 40, 25, 0.9);
+    }
+
+    .bk1{ margin-right: 80px; }
+    .bk2{ margin-right: 27px; }
+    .bk3{ margin-right: 52px; }
+    .bk4{ margin-right: 18px; }
+    .bk5{ margin-right: 50px; }
+
+    .book-cell{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .head_flds a{
+        color: #f0e6d2;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .head_flds a:hover{
+        color: #ffd28a;
+        text-decoration: underline;
+    }
+
+    .stat_iss{
+        border: 2px solid red;
+        border-radius: 12px;
+        padding: 4px 12px;
+    }
+
+    .stat_av{
+        border: 2px solid greenyellow;
+        border-radius: 12px;
+        padding: 4px 12px;
+    }
+    .login_btn{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    padding: 10px 22px;
+    border: 2px solid #8b5a2b;
+    border-radius: 12px;
+    color: #f0e6d2;
+    text-decoration: none;
+    font-weight: 600;
+    background: rgba(0,0,0,0.45);
+}
+
+.login_btn:hover{
+    background: rgba(139,90,43,0.6);
+    color: #ffd28a;
+}
+
+</style>
+
+<body>
+    <div class="bg"></div>
+
+    <h1 class="ttl">Online Books Library</h1>
+
+    <div class="owner-box">
+        Owner Name: Kalpesh Subandha <br>
+        Contact No: 9997681978
+    </div>
+    <a href="/login.html" class="login_btn" target="_blank">Register/Login</a>
+
+    <table class="head_flds" cellpadding="16">
+        <tr>
+            <td class="fld_names">Sr-no</td>
+            <td class="fld_names">Book name</td>
+            <td class="fld_names">Author</td>
+            <td class="fld_names">Status</td>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td class="book-cell">
+                <img src="/book_1.webp" class="bk1" width="100vh" height="130vh">
+                Tom Jones
+            </td>
+            <td>
+                <a href="https://en.wikipedia.org/wiki/The_History_of_Tom_Jones,_a_Foundling" target="_blank">
+                    Henry Fielding
+                </a>
+            </td>
+            <td><div class="stat_av">Available</div></td>
+        </tr>
+
+        <tr>
+            <td>002</td>
+            <td class="book-cell">
+                <img src="/book_2.webp" class="bk2" width="100vh" height="130vh">
+                Pickwick Papers
+            </td>
+            <td>
+                <a href="https://en.wikipedia.org/wiki/The_Pickwick_Papers" target="_blank">
+                    Charles Dickens
+                </a>
+            </td>
+            <td><div class="stat_av">Available</div></td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td class="book-cell">
+                <img src="/book_3.webp" class="bk3" width="100vh" height="130vh">
+                Silas Marner
+            </td>
+            <td>
+                <a href="https://en.wikipedia.org/wiki/Silas_Marner" target="_blank">
+                    George Elliot
+                </a>
+            </td>
+            <td><div class="stat_iss">Issued</div></td>
+        </tr>
+
+        <tr>
+            <td>004</td>
+            <td class="book-cell">
+                <img src="/book_4.webp" class="bk4" width="100vh" height="130vh">
+                Robinson Crusoe
+            </td>
+            <td>
+                <a href="https://en.wikipedia.org/wiki/Robinson_Crusoe" target="_blank">
+                    Daniel Defoe
+                </a>
+            </td>
+            <td><div class="stat_av">Available</div></td>
+        </tr>
+
+        <tr>
+            <td>005</td>
+            <td class="book-cell">
+                <img src="/book_5.webp" class="bk5" width="100vh" height="130vh">
+                Into the Wild
+            </td>
+            <td>
+                <a href="https://en.wikipedia.org/wiki/Into_the_Wild_(Krakauer_book)" target="_blank">
+                    Jon Krakauer
+                </a>
+            </td>
+            <td><div class="stat_iss">Issued</div></td>
+        </tr>
+    </table>
+</body>
+</html>
